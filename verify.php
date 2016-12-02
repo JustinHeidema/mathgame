@@ -5,7 +5,7 @@ $urlBack = "Location:login.php?";
 $email = $_POST["email"];
 $password = $_POST["password"];
 
-if ($email != "A00@840062" && $password != 'hellothere') {
+if ($email != "a@a.a" && $password != 'aaa') {
     $urlBack = $urlBack . "email=1&password=1&";
     header($urlBack); die();
 } else {
