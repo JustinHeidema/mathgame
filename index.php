@@ -3,7 +3,9 @@ session_start();
 $colorFont = "text-danger";
 $errorMessage = '';
 
-
+if (!isset($_SESSION['authenticated'])) {
+    header("Location: login.php"); die();
+}
 if (isset($_SESSION['guesses'])) {
     $_SESSION['guesses'] = $_SESSION['guesses'] + 1;
 } else {

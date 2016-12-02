@@ -8,12 +8,14 @@ $password = $_POST["password"];
 if ($email != "A00@840062" && $password != 'hellothere') {
     $urlBack = $urlBack . "email=1&password=1&";
     header($urlBack); die();
-} 
+} else {
+    $_SESSION['authenticated'] = true;
     header("Location: index.php"); die();
+}
+    
 
 
-$leftNumber = rand(0, 20);
-$rightNumber = rand(0, 20);
+
 
 
             
